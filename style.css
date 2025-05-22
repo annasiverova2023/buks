@@ -1,0 +1,836 @@
+/* CSS Variables */
+:root {
+    --color-main-bg: #ffffff;
+    --color-accent-light-yellow: #FFF6DA;
+    --color-accent-light-green: #E7F6EB;
+    --color-accent-pastel-blue: #DDEDF7;
+    --color-accent-peach: #FFF0E5;
+    --color-accent-light-lilac: #F2EAFE;
+    --color-accent-light-gray: #F9F9F9;
+    --color-cta-yellow: #FFD600;
+    --color-text-primary: #000000;
+    --color-text-secondary: #555555;
+    --color-text-icons-secondary: #888888;
+
+    --font-primary: 'Open Sans', sans-serif;
+    --default-spacing: 20px;
+    --border-radius-main: 6px;
+}
+
+/* Reset and Body Defaults */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Better box model */
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-main-bg);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    font-size: 16px; /* Base font size */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Page Wrapper */
+.page-wrapper {
+    width: 1440px;
+    max-width: 100%; /* Ensure it doesn't overflow on smaller viewports if not handled by media queries yet */
+    margin: 0 auto;
+    background-color: var(--color-main-bg); /* Ensures content area is white if body bg changes */
+    /* Optional: box-shadow: 0 0 15px rgba(0,0,0,0.05); */
+}
+
+/* Basic Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: var(--color-text-primary);
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5em; } /* Example sizes, adjust as needed */
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+
+p {
+    margin-bottom: 1em;
+    color: var(--color-text-secondary);
+}
+
+a {
+    color: var(--color-cta-yellow);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes bottom space under images */
+}
+
+/* Basic 12-Column Grid System */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--default-spacing, 20px); /* Default gap, can be overridden */
+    padding-left: var(--default-spacing, 20px); /* Gutters for the overall grid */
+    padding-right: var(--default-spacing, 20px);
+}
+
+/* Column Span Classes */
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+/* Utility classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.font-bold { font-weight: bold; }
+.hidden { display: none; }
+
+/* Basic Button Styling (can be expanded) */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--border-radius-main);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-cta-yellow);
+    color: var(--color-text-primary); /* Or #FFFFFF if contrast is better */
+}
+
+.btn-primary:hover {
+    background-color: #FFC107; /* Darken yellow slightly */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+}
+
+/* Placeholder for Material Design like shadows - can be refined */
+.material-shadow-1 { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+.material-shadow-2 { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); }
+.material-shadow-3 { box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); }
+
+/* Header Section */
+.site-header {
+    background-color: var(--color-main-bg);
+    padding-top: var(--default-spacing);
+    padding-bottom: var(--default-spacing);
+    border-bottom: 1px solid #eeeeee;
+}
+
+.header-content { /* This is a .grid-container */
+    align-items: center; 
+}
+
+/* Logo */
+.logo-container { /* This is a .col-3 */
+    display: flex;
+    align-items: center;
+}
+
+.logo-graphic {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+    height: 30px; 
+}
+
+.graphic-bar {
+    width: 8px; 
+    margin-right: 3px; 
+    display: inline-block;
+}
+
+.bar-green { background-color: #5cb85c; height: 25px; }
+.bar-orange { background-color: #f0ad4e; height: 18px; }
+.bar-yellow { background-color: var(--color-cta-yellow); height: 30px; }
+
+.logo-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+.logo-text:hover {
+    text-decoration: none;
+}
+
+/* Search Bar */
+.search-container { /* This is a .col-6 */
+    display: flex;
+    justify-content: center;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+    max-width: 450px; 
+    border: 1px solid #dddddd;
+    border-radius: var(--border-radius-main);
+    overflow: hidden; 
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    font-size: 0.95em;
+    outline: none;
+    color: var(--color-text-secondary);
+    background-color: transparent; /* Ensure it inherits page background */
+}
+
+.search-input::placeholder {
+    color: var(--color-text-icons-secondary);
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon {
+    color: var(--color-text-icons-secondary);
+}
+.search-button:hover .search-icon {
+    color: var(--color-text-primary);
+}
+
+
+/* Contact and Actions */
+.contact-actions-container { /* This is a .col-3 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 8px; 
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    font-size: 0.9em;
+    line-height: 1.3; /* Adjust for tighter spacing */
+}
+
+.phone-number {
+    color: var(--color-text-primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+.phone-number:hover {
+    color: var(--color-cta-yellow);
+    text-decoration: none;
+}
+
+.working-hours {
+    color: var(--color-text-secondary);
+    font-size: 0.85em;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.action-icon {
+    color: var(--color-text-icons-secondary);
+    text-decoration: none;
+}
+
+.action-icon svg {
+    display: block; 
+}
+
+.action-icon:hover {
+    color: var(--color-cta-yellow);
+}
+
+.btn-order-call {
+    padding: 8px 15px; 
+    font-size: 0.9em;
+    /* .btn-primary for yellow background is already defined in global styles */
+}
+
+/* Main Navigation Menu */
+.main-navigation {
+    background-color: var(--color-accent-light-gray);
+    border-bottom: 1px solid #e0e0e0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* .nav-content is a .grid-container, using its padding */
+.nav-menu.col-12 { /* Ensure it spans full width within the grid container's padding */
+     /* grid-column: 1 / -1; /* This would make it ignore grid container padding, not ideal here */
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0; /* Resetting padding for ul */
+    margin: 0;  /* Resetting margin for ul */
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.nav-menu li {
+    margin: 0 15px; 
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-size: 1em; 
+    font-weight: 500; /* As per Material Design guidelines, tabs/nav items can be medium */
+    padding: 10px 5px; 
+    display: block;
+    border-bottom: 2px solid transparent; 
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.nav-item:hover,
+.nav-item.active { /* Class .active can be added by JS for current page */
+    color: var(--color-cta-yellow);
+    border-bottom-color: var(--color-cta-yellow);
+    text-decoration: none;
+}
+
+/* Page Body Layout (Sidebar + Main Content) */
+.page-body-container.grid-container {
+    align-items: flex-start; /* Align items to the top of the grid row */
+    padding-top: var(--default-spacing); 
+    padding-bottom: var(--default-spacing); /* Add space at bottom too */
+}
+
+.sidebar-catalog { /* This is a .col-3 */
+    background-color: var(--color-main-bg); /* Or var(--color-accent-light-gray) if a distinct bg is needed */
+    padding: var(--default-spacing);
+    border-radius: var(--border-radius-main);
+    /* For fixed positioning later - these are complex and need JS or precise CSS based on other elements */
+    /* position: sticky; */ /* Sticky might be a better modern alternative to fixed here */
+    /* top: var(--default-spacing); */ /* Example for sticky */
+    /* height: calc(100vh - 2 * var(--default-spacing)); */ /* Example for sticky full height */
+    /* overflow-y: auto; */
+    border: 1px solid #e0e0e0; /* Give it a light border */
+}
+
+.sidebar-catalog h3 {
+    font-size: 1.2em;
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 10px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 5px; /* Adjusted padding */
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-size: 0.95em;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.category-list li a::before { /* Placeholder for icons */
+    content: '▹'; /* Using a different placeholder for now */
+    margin-right: 10px;
+    color: var(--color-text-icons-secondary); /* Gray icon color */
+    font-size: 1em; /* Adjust icon size */
+    transition: color 0.2s ease;
+}
+
+.category-list li a:hover {
+    background-color: var(--color-accent-light-yellow); /* Light yellow for hover, as an example */
+    color: var(--color-text-primary); /* Keep text dark, or change if contrast demands */
+    text-decoration: none;
+}
+
+.category-list li a:hover::before {
+    color: var(--color-cta-yellow); /* Icon color on hover */
+}
+
+.main-content { /* This is a .col-9 */
+    /* The grid gap should handle spacing, but if sidebar had negative margins or fixed positioning issues, padding here might be needed */
+    /* For now, relying on grid-gap from .page-body-container */
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%; 
+    margin-bottom: calc(var(--default-spacing) * 1.5); /* Increased bottom margin */
+}
+
+/* Pre-Hero Banners */
+.pre-hero-banners {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    background-color: var(--color-accent-light-gray); 
+    padding: 12px var(--default-spacing); /* Slightly more padding */
+    border-radius: var(--border-radius-main);
+    margin-bottom: var(--default-spacing);
+    border: 1px solid #e0e0e0;
+}
+
+.mini-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Increased gap */
+    font-size: 0.9em;
+    color: var(--color-text-secondary);
+}
+
+.mini-banner-icon {
+    color: var(--color-text-icons-secondary); 
+    width: 22px; 
+    height: 22px;
+}
+
+/* Main Hero Banner Content */
+.hero-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* User specified: "Фон: светло-серый с градиентом." - Assuming gradient to transparent or another light color */
+    background: linear-gradient(to right, var(--color-accent-light-gray) 0%, var(--color-accent-light-gray) 70%, #f0f0f0 100%); /* Example gradient */
+    padding: calc(var(--default-spacing) * 1.5) var(--default-spacing); /* Adjusted padding */
+    border-radius: var(--border-radius-main);
+    min-height: 320px; /* Adjusted height */
+    overflow: hidden; 
+    border: 1px solid #e0e0e0; /* Light border for definition */
+}
+
+.hero-text-content {
+    flex-basis: 58%; /* Give a bit more to text */
+    padding-right: calc(var(--default-spacing) * 1.5); 
+}
+
+.hero-text-content h1 {
+    font-size: 2.6em; 
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    line-height: 1.25;
+}
+
+.hero-text-content .subheadline {
+    font-size: 1.1em;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.8em; /* More space before button */
+}
+
+.btn-hero {
+    padding: 12px 30px; /* Larger padding for hero button */
+    font-size: 1.1em;
+    /* box-shadow: var(--material-shadow-2); Is already on .btn-primary if that has shadow */
+}
+/* Ensure .btn-primary from global styles has the shadow or add it here if specific to hero */
+.btn-primary.btn-hero { /* More specific selector for shadow if needed */
+     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.btn-hero:hover {
+    /* box-shadow: var(--material-shadow-3); */
+     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+.hero-image-area {
+    flex-basis: 42%; 
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px; /* Ensure area has height for placeholder */
+}
+
+.hero-image-area img {
+    max-width: 100%;
+    max-height: 280px; /* Control image height */
+    object-fit: contain;
+    border-radius: var(--border-radius-main);
+}
+
+.discount-icons-overlay {
+    position: absolute;
+    top: 15px; /* Adjust position */
+    right: 15px; /* Adjust position */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between badges */
+}
+
+.discount-badge {
+    background-color: var(--color-cta-yellow);
+    color: var(--color-text-primary);
+    padding: 6px 10px; /* Slightly larger badges */
+    border-radius: var(--border-radius-main);
+    font-size: 0.9em;
+    font-weight: bold;
+    box-shadow: var(--material-shadow-1);
+    text-align: center;
+}
+
+/* Product Catalog Section */
+.product-catalog-section {
+    /* padding: var(--default-spacing) 0; Should use main content padding */
+    margin-bottom: calc(var(--default-spacing) * 1.5);
+}
+
+.catalog-title {
+    font-size: 1.8em; 
+    font-weight: bold;
+    color: var(--color-text-primary);
+    margin-bottom: var(--default-spacing);
+    /* text-align: left; Already default */
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    grid-auto-rows: minmax(min-content, max-content); /* Allow rows to size to content */
+    /* grid-auto-flow: dense; /* May help fill gaps, but can reorder items */
+    gap: var(--default-spacing);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: var(--border-radius-main);
+    overflow: hidden; 
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    position: relative; 
+    padding: var(--default-spacing);
+    box-shadow: var(--material-shadow-1);
+     /* min-height is set by item-NXM classes */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: var(--material-shadow-2); 
+    text-decoration: none;
+}
+
+/* Defined background colors (from user description or global CSS variables) */
+.card-color-light-yellow { background-color: var(--color-accent-light-yellow); }
+.card-color-light-lilac { background-color: var(--color-accent-light-lilac); }
+.card-color-pastel-blue { background-color: var(--color-accent-pastel-blue); }
+.card-color-peach { background-color: var(--color-accent-peach); }
+.card-color-light-green { background-color: var(--color-accent-light-green); }
+/* Using the already defined accent colors */
+.card-color-accent-light-yellow { background-color: var(--color-accent-light-yellow); }
+.card-color-accent-pastel-blue { background-color: var(--color-accent-pastel-blue); }
+.card-color-accent-light-green { background-color: var(--color-accent-light-green); }
+.card-color-accent-light-lilac { background-color: var(--color-accent-light-lilac); }
+
+
+.product-card img {
+    width: 100%;
+    object-fit: contain; 
+    margin-bottom: 15px; /* Increased space */
+    border-radius: 4px; 
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1)); /* Softer shadow */
+}
+
+.product-card .card-content {
+    margin-top: auto; 
+    text-align: center; 
+}
+
+.product-card h3 {
+    font-size: 1.15em; /* Slightly larger */
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 8px; /* More space */
+}
+
+.product-card .price-from {
+    font-size: 0.95em;
+    color: var(--color-text-secondary);
+    margin-bottom: 0;
+}
+
+/* Card Sizing and Spanning */
+.item-1x1 { 
+    grid-column: span 3; /* On a 12-col layout, this means 4 items per row */
+    grid-row: span 1; 
+    min-height: 300px; /* Base height for 1x1 */
+}
+.item-1x1 img { max-height: 180px; }
+
+.item-2x1 { 
+    grid-column: span 6; /* Half width */
+    grid-row: span 1; 
+    min-height: 300px; /* Same height as 1x1, but wider */
+}
+.item-2x1 img { max-height: 180px; } /* Image height remains same */
+
+.item-2x2 { 
+    grid-column: span 6; /* Half width */
+    grid-row: span 2;   /* Double height */
+    min-height: 500px; /* Significantly taller */
+}
+.item-2x2 img { max-height: 360px; } /* Image can be much taller */
+
+/* Ensure cards in the last row also align correctly if it's not full.
+   The default grid behavior is to align-items: stretch on the cross-axis,
+   and justify-items: stretch on the main-axis for grid cells.
+   The content inside the flexbox (.product-card) will behave as styled.
+*/
+
+/* Sales Leaders Sidebar Section */
+.sales-leaders-sidebar {
+    margin-top: calc(var(--default-spacing) * 1.5); 
+    padding-top: var(--default-spacing);
+    border-top: 1px solid #e0e0e0; 
+    background-color: var(--color-accent-light-gray); /* Gray background for the block */
+    padding: var(--default-spacing); 
+    border-radius: var(--border-radius-main); 
+}
+
+/* Shared title style with category list, or make specific if different */
+.sales-leaders-sidebar .sidebar-section-title { 
+    font-size: 1.15em; /* Adjusted size */
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dcdcdc; /* Slightly darker border */
+    padding-bottom: 10px;
+}
+
+.sales-leader-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-spacing);
+}
+
+.sales-leader-item {
+    display: flex;
+    align-items: flex-start; 
+    gap: 12px; /* Increased gap */
+    text-decoration: none;
+    color: var(--color-text-primary);
+    padding: 12px; /* Increased padding */
+    border-radius: var(--border-radius-main);
+    background-color: var(--color-main-bg); 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08); /* Softer shadow */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.sales-leader-item:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.sales-leader-item img {
+    width: 70px; 
+    height: 70px;
+    object-fit: cover; 
+    border-radius: 4px;
+    border: 1px solid #eeeeee; 
+}
+
+.sales-leader-item .item-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    gap: 4px; /* Fine-tuned gap */
+}
+
+.sales-leader-item .item-name {
+    font-size: 0.9em;
+    font-weight: 600; /* Slightly bolder */
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: 1.35; 
+}
+
+.sales-leader-item .item-rating {
+    font-size: 0.8em; /* Smaller stars */
+    color: #FFC107; 
+}
+.sales-leader-item .item-rating span { margin-right: 1px; } 
+
+
+.sales-leader-item .item-price {
+    font-size: 0.85em; /* Base size for price container */
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 2px;
+    margin-top: 4px; /* Space above price block */
+}
+
+.sales-leader-item .current-price {
+    font-weight: bold;
+    color: var(--color-text-primary);
+    font-size: 1em; /* Relative to .item-price, so 0.85em total */
+}
+
+.sales-leader-item .old-price {
+    color: var(--color-text-icons-secondary);
+    text-decoration: line-through;
+    font-size: 0.9em; /* Relative to .item-price */
+}
+
+/* User Reviews Section */
+.user-reviews-section {
+    background-color: var(--color-main-bg); 
+    padding: calc(var(--default-spacing) * 1.5) var(--default-spacing); 
+    margin-bottom: calc(var(--default-spacing) * 1.5);
+    border-radius: var(--border-radius-main);
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.05); */ /* Optional subtle shadow for the section */
+}
+
+.user-reviews-section .section-title { 
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: calc(var(--default-spacing) * 1.5); 
+    text-align: center; 
+}
+
+.reviews-container {
+    display: grid;
+    /* If strictly 3 columns are desired on desktop and then less on mobile: */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* For responsive columns: */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: var(--default-spacing);
+    margin-bottom: var(--default-spacing); 
+}
+
+.review-card {
+    background-color: var(--color-main-bg); 
+    border-radius: var(--border-radius-main);
+    padding: var(--default-spacing);
+    border: 1px solid #e8e8e8; /* Minimalist border */
+    box-shadow: var(--material-shadow-1); /* Using pre-defined light shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-4px); /* Slightly more lift */
+    box-shadow: var(--material-shadow-2); /* Slightly stronger shadow on hover */
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.reviewer-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    object-fit: cover;
+    background-color: var(--color-accent-light-gray); /* Placeholder bg for image */
+}
+
+.reviewer-info { /* Container for name and date */
+    flex-grow: 1;
+}
+
+.reviewer-info .reviewer-name { /* Corrected from h4 to .reviewer-name */
+    margin: 0 0 3px 0;
+    font-size: 1.05em; /* Adjusted size */
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.reviewer-info .review-date {
+    margin: 0;
+    font-size: 0.8em; /* Adjusted size */
+    color: var(--color-text-icons-secondary);
+}
+
+.review-body .review-text {
+    font-size: 0.9em; /* Adjusted size */
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin-bottom: 12px; /* Adjusted space */
+}
+
+.review-body .reviewed-item-name {
+    font-size: 0.85em; /* Adjusted size */
+    font-weight: bold;
+    color: var(--color-text-primary);
+    margin-top: 15px; 
+    padding-top: 10px;
+    border-top: 1px dashed #e0e0e0; 
+    text-align: right; 
+}
+
+/* Slider Navigation Dots */
+.slider-navigation-dots {
+    text-align: center;
+    margin-top: calc(var(--default-spacing) * 1.5);
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cccccc; 
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background-color: var(--color-cta-yellow); 
+    transform: scale(1.1);
+}

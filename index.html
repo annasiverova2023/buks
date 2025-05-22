@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestMebel - Интернет-магазин мебели</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="header-content grid-container">
+                <div class="logo-container col-3">
+                    <div class="logo-graphic">
+                        <span class="graphic-bar bar-green"></span>
+                        <span class="graphic-bar bar-orange"></span>
+                        <span class="graphic-bar bar-yellow"></span>
+                    </div>
+                    <a href="/" class="logo-text">BestMebel</a>
+                </div>
+
+                <div class="search-container col-6">
+                    <form action="/search" method="get" class="search-form">
+                        <input type="search" name="query" placeholder="Поиск среди 90 000 товаров" class="search-input">
+                        <button type="submit" class="search-button" aria-label="Поиск">
+                            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20px" height="20px"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-actions-container col-3">
+                    <div class="contact-info">
+                        <a href="tel:+70000000000" class="phone-number">+7 (000) 000-00-00</a>
+                        <span class="working-hours">Пн-Пт: 10:00 - 20:00</span>
+                    </div>
+                    <div class="user-actions">
+                        <a href="/profile" aria-label="Профиль" class="action-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </a>
+                        <a href="/favorites" aria-label="Избранное" class="action-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </a>
+                        <a href="/cart" aria-label="Корзина" class="action-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                        </a>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-order-call">Заказать звонок</button>
+                </div>
+            </div>
+        </header>
+        <nav class="main-navigation">
+            <div class="nav-content grid-container">
+                <ul class="nav-menu col-12">
+                    <li><a href="/catalog" class="nav-item">Каталог</a></li>
+                    <li><a href="/payment" class="nav-item">Оплата</a></li>
+                    <li><a href="/delivery" class="nav-item">Доставка</a></li>
+                    <li><a href="/reviews" class="nav-item">Отзывы</a></li>
+                    <li><a href="/contacts" class="nav-item">Контакты</a></li>
+                    <li><a href="/articles" class="nav-item">Статьи</a></li>
+                    <li><a href="/promotions" class="nav-item">Акции</a></li>
+                    <li><a href="/faq" class="nav-item">Вопросы</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="page-body-container grid-container"> 
+            <aside class="sidebar-catalog col-3">
+                <h3>Каталог мебели</h3>
+                <ul class="category-list">
+                    <li><a href="#"><!-- Icon placeholder --> Гостинные</a></li>
+                    <li><a href="#"><!-- Icon placeholder --> Кухни</a></li>
+                    <li><a href="#"><!-- Icon placeholder --> Спальни</a></li>
+                    <li><a href="#"><!-- Icon placeholder --> Ванные</a></li>
+                    <li><a href="#"><!-- Icon placeholder --> Прихожие</a></li>
+                    <li><a href="#"><!-- Icon placeholder --> Мебель для офиса</a></li>
+                    <li><a href="#"><!-- Icon placeholder --> Стеллажи</a></li>
+                    <li><a href="#"><!-- Icon placeholder --> Комоды</a></li>
+                    <!-- Add more example categories if desired -->
+                    <li><a href="#"><!-- Icon placeholder --> Детская мебель</a></li>
+                    <li><a href="#"><!-- Icon placeholder --> Мягкая мебель</a></li>
+                </ul>
+                <section class="sales-leaders-sidebar">
+                    <h3 class="sidebar-section-title">Лидеры продаж</h3>
+                    <div class="sales-leader-items">
+                        <a href="#" class="sales-leader-item">
+                            <img src="https://via.placeholder.com/70x70/F5F5F5/555?text=Hit+1" alt="Лидер продаж 1">
+                            <div class="item-details">
+                                <h4 class="item-name">Элегантный комод "Винтаж"</h4>
+                                <div class="item-rating">
+                                    <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>☆</span>
+                                </div>
+                                <div class="item-price">
+                                    <span class="current-price">2 990 ₽</span>
+                                    <span class="old-price">3 500 ₽</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="sales-leader-item">
+                            <img src="https://via.placeholder.com/70x70/F5F5F5/555?text=Hit+2" alt="Лидер продаж 2">
+                            <div class="item-details">
+                                <h4 class="item-name">Кресло "Комфорт Плюс"</h4>
+                                <div class="item-rating">
+                                    <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                                </div>
+                                <div class="item-price">
+                                    <span class="current-price">1 450 ₽</span>
+                                    <span class="old-price">1 800 ₽</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="sales-leader-item">
+                            <img src="https://via.placeholder.com/70x70/F5F5F5/555?text=Hit+3" alt="Лидер продаж 3">
+                            <div class="item-details">
+                                <h4 class="item-name">Стол обеденный "Лофт"</h4>
+                                <div class="item-rating">
+                                    <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>☆</span>
+                                </div>
+                                <div class="item-price">
+                                    <span class="current-price">5 800 ₽</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <section class="user-reviews-section">
+                    <h2 class="section-title">Отзывы покупателей</h2>
+                    <div class="reviews-container">
+                        <!-- Review Card 1 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="https://via.placeholder.com/60x60/E0E0E0/888888?text=ЕП" alt="Фото пользователя Елена П." class="reviewer-photo">
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Елена П.</h4>
+                                    <p class="review-date">15 марта 2024</p>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text">Очень довольна качеством купленного дивана! Сборка была быстрой, доставили в срок. Выглядит даже лучше, чем на фото. Рекомендую этот магазин.</p>
+                                <p class="reviewed-item-name">Диван "Атлант"</p>
+                            </div>
+                        </div>
+        
+                        <!-- Review Card 2 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="https://via.placeholder.com/60x60/E0E0E0/888888?text=ИС" alt="Фото пользователя Игорь С." class="reviewer-photo">
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Игорь С.</h4>
+                                    <p class="review-date">22 февраля 2024</p>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text">Заказывал кухонный гарнитур. Менеджер помог с выбором, учли все пожелания. Качество материалов на высоте, фурнитура хорошая. Семья довольна!</p>
+                                <p class="reviewed-item-name">Кухня "Модерн"</p>
+                            </div>
+                        </div>
+        
+                        <!-- Review Card 3 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="https://via.placeholder.com/60x60/E0E0E0/888888?text=АК" alt="Фото пользователя Анна К." class="reviewer-photo">
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Анна К.</h4>
+                                    <p class="review-date">10 января 2024</p>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text">Большой выбор мебели для детской. Нашли идеальную кроватку и шкаф. Цены приемлемые, есть рассрочка, что очень удобно. Будем заказывать еще.</p>
+                                <p class="reviewed-item-name">Детская "Сказка"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-navigation-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </section>
+            </aside>
+
+            <main class="main-content col-9">
+                <!-- Content will go here -->
+                <section class="hero-section">
+                    <div class="pre-hero-banners">
+                        <div class="mini-banner">
+                            <svg class="mini-banner-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M9 21.57C8.45 21.57 8 21.12 8 20.57V19H5C3.34 19 2 17.66 2 16V6C2 4.34 3.34 3 5 3H19C20.66 3 22 4.34 22 6V16C22 17.66 20.66 19 19 19H16V20.57C16 21.12 15.55 21.57 15 21.57H9ZM19 5H5C4.45 5 4 5.45 4 6V16C4 16.55 4.45 17 5 17H19C19.55 17 20 16.55 20 16V6C20 5.45 19.55 5 19 5Z M12 15L7 10H10V7H14V10H17L12 15Z "/></svg> <!-- Generic Guarantee/Shield Icon -->
+                            <span>Гарантия</span>
+                        </div>
+                        <div class="mini-banner">
+                            <svg class="mini-banner-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M20 4H4C2.89 4 2.01 4.89 2.01 6L2 18C2 19.11 2.89 20 4 20H20C21.11 20 22 19.11 22 18V6C22 4.89 21.11 4 20 4ZM20 18H4V12H20V18ZM20 8H4V6H20V8Z"/></svg> <!-- Generic Credit Card Icon -->
+                            <span>Рассрочка</span>
+                        </div>
+                        <div class="mini-banner">
+                             <svg class="mini-banner-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M20 8H17V4H7V8H4L12 16L20 8ZM3 18V20H21V18H3Z"/></svg> <!-- Generic Delivery/Truck Icon -->
+                            <span>Доставка</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-banner-content">
+                        <div class="hero-text-content">
+                            <h1>Найдёте дешевле — мы сделаем скидку!</h1>
+                            <p class="subheadline">Только лучшая мебель по самым выгодным ценам. Сравните и убедитесь!</p>
+                            <a href="#catalog" class="btn btn-primary btn-hero">Подробнее</a>
+                        </div>
+                        <div class="hero-image-area">
+                            <img src="https://via.placeholder.com/400x320/EEEEEE/777777?text=Comfortable+Armchair" alt="Комфортное кресло со скидкой">
+                            <div class="discount-icons-overlay">
+                                <span class="discount-badge">-25%</span>
+                                <span class="discount-badge">HIT</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="product-catalog-section">
+                    <h2 class="catalog-title">Интернет-магазин мебели BestMebel в Санкт-Петербурге</h2>
+                    <div class="catalog-grid">
+                        <!-- Row 1 -->
+                        <a href="#" class="product-card card-color-light-yellow item-1x1">
+                            <img src="https://via.placeholder.com/250x180/FFFFFF/333333?text=Комод+Современный" alt="Комоды и тумбы">
+                            <div class="card-content">
+                                <h3>Комоды и тумбы</h3>
+                                <p class="price-from">от 3 499 руб.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="product-card card-color-light-lilac item-1x1">
+                            <img src="https://via.placeholder.com/250x180/FFFFFF/333333?text=Кухонный+Гарнитур" alt="Мебель для кухни">
+                            <div class="card-content">
+                                <h3>Мебель для кухни</h3>
+                                <p class="price-from">от 12 990 руб.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="product-card card-color-pastel-blue item-2x1">
+                            <img src="https://via.placeholder.com/520x180/FFFFFF/333333?text=Стеллаж+Книжный" alt="Стеллажи">
+                            <div class="card-content">
+                                <h3>Стеллажи</h3>
+                                <p class="price-from">от 2 100 руб.</p>
+                            </div>
+                        </a>
+        
+                        <!-- Row 2 -->
+                        <a href="#" class="product-card card-color-peach item-2x2">
+                            <img src="https://via.placeholder.com/520x400/FFFFFF/333333?text=Шкаф+Распашной" alt="Шкафы">
+                            <div class="card-content">
+                                <h3>Шкафы</h3>
+                                <p class="price-from">от 8 500 руб.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="product-card card-color-light-green item-1x1">
+                            <img src="https://via.placeholder.com/250x180/FFFFFF/333333?text=Кресло+Мягкое" alt="Кресла">
+                            <div class="card-content">
+                                <h3>Кресла</h3>
+                                <p class="price-from">от 4 200 руб.</p>
+                            </div>
+                        </a>
+                         <a href="#" class="product-card card-color-accent-light-yellow item-1x1"> <!-- Using a defined color -->
+                            <img src="https://via.placeholder.com/250x180/FFFFFF/333333?text=Стол+Обеденный" alt="Столы">
+                            <div class="card-content">
+                                <h3>Столы</h3>
+                                <p class="price-from">от 1 800 руб.</p>
+                            </div>
+                        </a>
+                        
+                        <!-- Row 3 - Example of filling up more space -->
+                         <a href="#" class="product-card card-color-accent-pastel-blue item-1x1"> <!-- Using a defined color -->
+                            <img src="https://via.placeholder.com/250x180/FFFFFF/333333?text=Диван+Угловой" alt="Диваны">
+                            <div class="card-content">
+                                <h3>Диваны</h3>
+                                <p class="price-from">от 15 000 руб.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="product-card card-color-accent-light-green item-1x1"> <!-- Using a defined color -->
+                            <img src="https://via.placeholder.com/250x180/FFFFFF/333333?text=Кровать+Двуспальная" alt="Кровати">
+                            <div class="card-content">
+                                <h3>Кровати</h3>
+                                <p class="price-from">от 9 990 руб.</p>
+                            </div>
+                        </a>
+                         <a href="#" class="product-card card-color-accent-light-lilac item-2x1"> <!-- Using a defined color -->
+                            <img src="https://via.placeholder.com/520x180/FFFFFF/333333?text=Мебель+для+Ванной" alt="Ванные">
+                            <div class="card-content">
+                                <h3>Ванные</h3>
+                                <p class="price-from">от 5 500 руб.</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <section class="user-reviews-section">
+                    <h2 class="section-title">Отзывы покупателей</h2>
+                    <div class="reviews-container">
+                        <!-- Review Card 1 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="https://via.placeholder.com/60x60/E0E0E0/888888?text=ЕП" alt="Фото пользователя Елена П." class="reviewer-photo">
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Елена П.</h4>
+                                    <p class="review-date">15 марта 2024</p>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text">Очень довольна качеством купленного дивана! Сборка была быстрой, доставили в срок. Выглядит даже лучше, чем на фото. Рекомендую этот магазин.</p>
+                                <p class="reviewed-item-name">Диван "Атлант"</p>
+                            </div>
+                        </div>
+        
+                        <!-- Review Card 2 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="https://via.placeholder.com/60x60/E0E0E0/888888?text=ИС" alt="Фото пользователя Игорь С." class="reviewer-photo">
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Игорь С.</h4>
+                                    <p class="review-date">22 февраля 2024</p>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text">Заказывал кухонный гарнитур. Менеджер помог с выбором, учли все пожелания. Качество материалов на высоте, фурнитура хорошая. Семья довольна!</p>
+                                <p class="reviewed-item-name">Кухня "Модерн"</p>
+                            </div>
+                        </div>
+        
+                        <!-- Review Card 3 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="https://via.placeholder.com/60x60/E0E0E0/888888?text=АК" alt="Фото пользователя Анна К." class="reviewer-photo">
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Анна К.</h4>
+                                    <p class="review-date">10 января 2024</p>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text">Большой выбор мебели для детской. Нашли идеальную кроватку и шкаф. Цены приемлемые, есть рассрочка, что очень удобно. Будем заказывать еще.</p>
+                                <p class="reviewed-item-name">Детская "Сказка"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-navigation-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
