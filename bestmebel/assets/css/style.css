@@ -1,0 +1,675 @@
+/* BestMebel Theme Custom Styles */
+
+/* Basic Body Styles (Example) */
+body {
+    font-family: sans-serif; /* Placeholder, will be replaced by Google Font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px; /* Overall container width */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Hero Block Styles */
+.hero-banner {
+    background-color: #F9F9F9; /* светло-серый */
+    /* background-image: linear-gradient(to right, #F9F9F9, #ECECEC); */ /* Optional gradient */
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.pre-hero-icons {
+    background-color: #ffffff;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.pre-hero-icons .container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.pre-hero-icons .icon-block {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555555;
+}
+
+.pre-hero-icons .icon-block .icon {
+    margin-right: 8px;
+    font-size: 20px;
+    color: #888888;
+}
+
+.hero-content .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.cta-button.hero-button {
+    background-color: #FFD600; /* насыщенный жёлтый */
+    color: #000000;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: inline-block;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button.hero-button:hover {
+    background-color: #f0c000;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.hero-illustration {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-illustration img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.discount-icons-placeholder {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #888888;
+}
+
+/* Main Category Teaser Grid Styles */
+.product-catalog-teaser {
+    padding: 40px 0;
+}
+
+.product-catalog-teaser .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: left; /* Or center, depending on preference */
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax for desired base card size */
+    /* For explicit column control using a 4-column conceptual layout for cards: */
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 20px;
+}
+
+.category-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden; /* To keep image corners rounded if image itself isn't */
+    display: flex; /* To help with content structure if needed */
+    flex-direction: column;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.category-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Make link fill the card */
+}
+
+.category-card .category-image {
+    width: 100%;
+    height: 150px; /* Example height, adjust as needed */
+    object-fit: cover;
+    display: block; /* Remove extra space below image */
+}
+
+.category-card .category-info {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1; /* Push price to bottom if card heights vary due to grid */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.category-card p {
+    font-size: 16px;
+    color: #555555;
+    margin-top: auto; /* Pushes price to the bottom of its container */
+}
+
+/* Background Color Classes */
+.bg-light-yellow { background-color: #FFF6DA; }
+.bg-light-green { background-color: #E7F6EB; }
+.bg-pastel-blue { background-color: #DDEDF7; }
+.bg-peach { background-color: #FFF0E5; }
+.bg-light-lavender { background-color: #F2EAFE; }
+.bg-light-gray { background-color: #F9F9F9; }
+
+/* Size Classes (Example for a direct fr grid, or adapt to 12-col spans)
+   If using grid-template-columns: repeat(4, 1fr); for the grid: */
+.category-grid .size-1x1 {
+    /* grid-column: span 1; grid-row: span 1; */ /* Example for 4-col */
+}
+.category-grid .size-2x1 {
+    /* grid-column: span 2; grid-row: span 1; */ /* Example for 4-col */
+}
+.category-grid .size-2x2 {
+    /* grid-column: span 2; grid-row: span 2; */ /* Example for 4-col */
+    /* May need to adjust image height or card min-height for 2x2 */
+}
+.category-grid .size-2x2 .category-image {
+    height: 250px; /* Taller image for 2x2 cards */
+}
+
+/* Sidebar Sales Leaders Widget Styles */
+.widget.sales-leaders-widget {
+    margin-top: 30px; /* Space above the sales leaders section in the sidebar */
+}
+
+.sales-leaders-widget .widget-title {
+    font-size: 18px; /* Matching .side-menu h2 from previous static styles */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.sales-leaders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between mini product cards */
+}
+
+.mini-product-card {
+    display: flex;
+    align-items: center;
+    background-color: #F9F9F9; /* серый фон (light gray) */
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s ease;
+}
+
+.mini-product-card:hover {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.mini-product-card a.mini-product-image-link {
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.mini-product-card img {
+    width: 60px; /* Миниатюрные */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.mini-product-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Small gap between details */
+}
+
+.mini-product-details .mini-product-title,
+.mini-product-details .mini-product-title a {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 600; /* Slightly bolder than normal text */
+    text-decoration: none;
+    line-height: 1.3;
+}
+.mini-product-details .mini-product-title a:hover {
+    text-decoration: underline;
+}
+
+.mini-product-details .rating {
+    font-size: 12px;
+    color: #FFD600; /* Yellow for stars */
+    line-height: 1; /* Keep stars tight */
+}
+.mini-product-details .rating span { /* If using actual star characters */
+    letter-spacing: -1px; /* Make stars closer */
+}
+
+
+.mini-product-details .price-section {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap; /* Allow wrapping if space is tight */
+    gap: 8px; /* Space between current and old price */
+    margin-top: 2px;
+}
+
+.mini-product-details .current-price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.mini-product-details .old-price {
+    font-size: 12px;
+    color: #888888; /* Иконки и вторичный текст */
+    text-decoration: line-through;
+}
+
+/* User Reviews Section Styles */
+.user-reviews-section {
+    padding: 40px 0;
+    background-color: #ffffff; /* Белый фон */
+}
+
+.user-reviews-section .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: center; /* Or left, as preferred */
+}
+
+.reviews-slider-wrapper {
+    display: flex; /* For now, cards will be side-by-side. JS will hide/show. */
+    justify-content: space-between; /* Example spacing if cards are visible */
+    gap: 20px; /* Space between cards */
+    margin-bottom: 30px;
+    /* overflow: hidden; */ /* JS will handle overflow for sliding effect */
+}
+
+.review-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Лёгкая тень */
+    /* Стиль карточек — плоский, минималистичный */
+    flex-basis: calc(33.333% - 14px); /* Approx 1/3 width minus gap adjustment */
+    display: flex;
+    flex-direction: column;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reviewer-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Circular photo */
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.review-date {
+    font-size: 12px;
+    color: #888888; /* Иконки и вторичный текст */
+}
+
+.review-body p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555555; /* Текст */
+    margin-bottom: 15px;
+    flex-grow: 1; /* Ensure cards have similar height if text length varies */
+}
+
+.review-footer {
+    margin-top: auto; /* Push footer to bottom */
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.reviewed-item-name {
+    font-size: 13px;
+    font-style: italic;
+    color: #888888;
+}
+
+.slider-dots-navigation {
+    text-align: center;
+}
+
+.slider-dots-navigation .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.slider-dots-navigation .dot.active {
+    background-color: #FFD600; /* Активный цвет точки (жёлтый) */
+}
+
+/* Documents Slider Section Styles (Acknowledgments & Certificates) */
+.documents-slider-section {
+    padding: 40px 0;
+    background-color: #F9F9F9; /* светло-серая подложка (backing) */
+}
+.documents-slider-section.acknowledgments-section { /* If specific styling needed */
+     background-color: #ffffff; /* Белый фон для благодарностей */
+}
+.documents-slider-section.certificates-section { /* If specific styling needed */
+     background-color: #F9F9F9; /* Светло-серая подложка для сертификатов */
+}
+
+
+.documents-slider-section .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: center; /* Or left */
+}
+
+.documents-slider-wrapper {
+    display: flex; /* For now, items will be side-by-side. JS will hide/show. */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 20px; /* Space between items */
+    overflow-x: auto; /* Allow horizontal scrolling for now if many items */
+    padding-bottom: 20px; /* Space for scrollbar if it appears */
+}
+
+.document-item {
+    background-color: #ffffff; /* Фон самого документа - белый */
+    border-radius: 4px; /* Слегка скругленные углы для документа */
+    padding: 10px; /* Небольшой отступ вокруг изображения */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1); /* Лёгкие тени */
+    flex: 0 0 auto; /* Prevent items from shrinking, allow them to take their content size */
+    width: 220px; /* Example width, adjust as needed */
+}
+
+.document-item.official-document-item {
+     border: 1px solid #DDD; /* More formal border for official certs */
+     box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+
+.document-image-wrapper {
+    /* If you want a fixed aspect ratio for the image container: */
+    /* position: relative; padding-bottom: 141.4%; height: 0; overflow: hidden; */ /* For A4-like ratio (1 / sqrt(2)) */
+    border: 1px solid #eee; /* Тонкая рамка вокруг самого изображения */
+}
+
+.document-item img {
+    display: block;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 2px; /* Very slight rounding for image if not handled by wrapper */
+}
+
+.document-item .document-title { /* Optional title below image */
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Advantages Block Styles */
+.advantages-section {
+    background-color: #F9F9F9; /* Фон светло-серый */
+    padding: 40px 0;
+}
+
+/* Optional: Title for advantages section if added
+.advantages-section .section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 30px;
+}
+*/
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive columns */
+    /* For a strict 6-column layout on wider screens and fewer on smaller:
+       grid-template-columns: repeat(6, 1fr); // Desktop
+       Adjust with media queries for tablet (e.g., repeat(3, 1fr)) and mobile (e.g., repeat(2, 1fr) or 1fr)
+    */
+    gap: 20px;
+}
+
+.advantage-card {
+    background-color: #ffffff; /* Карточки — белые */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.07); /* Мягкой тенью */
+    text-align: center; /* Center icon and text */
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    min-height: 120px; /* Ensure cards have some height */
+}
+
+.advantage-icon {
+    font-size: 32px; /* Adjust as needed for linear icons */
+    color: #333; /* Монохромные (adjust if using font icons with specific color) */
+    margin-bottom: 15px;
+    /* For linear icons, this might be an <img>, <span> with background, or font icon */
+    /* Example for a placeholder character */
+    line-height: 1;
+}
+
+.advantage-text {
+    font-size: 15px;
+    color: #333333; /* Текст */
+    line-height: 1.4;
+}
+
+/* Feedback Form Section Styles */
+.feedback-form-section {
+    padding: 40px 0;
+    background-color: #ffffff; /* Or a very light gray if contrast needed */
+}
+
+.feedback-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Adjust ratio as needed, e.g., 1fr 2fr */
+    gap: 40px; /* Space between contact info and form */
+}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width: 768px) {
+    .feedback-layout {
+        grid-template-columns: 1fr; /* Single column */
+    }
+    .feedback-contact-info {
+        margin-bottom: 30px;
+    }
+}
+
+.feedback-contact-info h3,
+.feedback-form-wrapper h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.feedback-contact-info p {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.feedback-contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.feedback-contact-info li {
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.feedback-contact-info li .icon {
+    margin-right: 10px;
+    color: #FFD600; /* Accent color for icons */
+    font-size: 18px;
+}
+.feedback-contact-info li a {
+    color: #333333;
+    text-decoration: none;
+}
+.feedback-contact-info li a:hover {
+    text-decoration: underline;
+}
+
+
+.messenger-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.messenger-icons .messenger-icon {
+    font-size: 12px; /* For text placeholders */
+    color: #fff;
+    background-color: #888888; /* Default placeholder background */
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+.messenger-icons .messenger-icon:hover {
+    opacity: 0.8;
+}
+/* Example specific messenger colors - replace text with actual icons later */
+.messenger-icons .vk-icon { background-color: #4A76A8; }
+.messenger-icons .tg-icon { background-color: #0088cc; }
+.messenger-icons .wa-icon { background-color: #25D366; }
+
+
+.feedback-form .form-group {
+    margin-bottom: 20px;
+}
+
+.feedback-form label {
+    display: block;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="tel"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form input[type="tel"]:focus,
+.feedback-form textarea:focus {
+    border-color: #FFD600; /* Highlight focus with accent color */
+    outline: none;
+}
+
+.feedback-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-submit-button.cta-button {
+    background-color: #FFD600; /* насыщенный жёлтый */
+    color: #000000;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-submit-button.cta-button:hover {
+    background-color: #f0c000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}

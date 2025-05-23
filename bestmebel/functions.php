@@ -82,7 +82,7 @@ add_action( 'after_setup_theme', 'bestmebel_setup' );
 require get_template_directory() . '/inc/enqueue.php';
 
 // Placeholder for custom post types (will be in inc/custom-post-types.php)
-// require get_template_directory() . '/inc/custom-post-types.php';
+require get_template_directory() . '/inc/custom-post-types.php';
 
 // Placeholder for theme settings (will be in inc/theme-settings.php)
 // require get_template_directory() . '/inc/theme-settings.php';
