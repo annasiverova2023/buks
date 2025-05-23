@@ -834,3 +834,122 @@ img {
     background-color: var(--color-cta-yellow); 
     transform: scale(1.1);
 }
+
+/* Site Footer */
+.site-footer {
+    background-color: var(--color-accent-light-gray);
+    color: var(--color-text-secondary);
+    padding-top: calc(var(--default-spacing) * 2);
+    margin-top: calc(var(--default-spacing) * 1.5);
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-content.grid-container {
+    padding-bottom: calc(var(--default-spacing) * 1.5); /* Adjusted padding */
+    align-items: flex-start;
+}
+
+.footer-column { /* General styling for all footer columns */
+    /* display: flex; flex-direction: column; /* If needed for alignment */
+}
+
+.footer-column h4 {
+    font-size: 1.05em; /* Adjusted size */
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 18px; /* Increased space */
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px; /* Increased space */
+}
+
+.footer-column ul li a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-column ul li a:hover {
+    color: var(--color-cta-yellow);
+    text-decoration: underline;
+}
+
+.footer-contacts .footer-logo {
+    margin-bottom: 18px; /* Increased space */
+}
+.footer-contacts .footer-logo .logo-text {
+    font-size: 1.6em;
+    font-weight: bold; /* Ensure it's bold like header */
+    color: var(--color-text-primary);
+}
+.footer-contacts .footer-logo .logo-text:hover {
+    text-decoration: none;
+}
+
+
+.footer-contacts .footer-phone {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    margin-bottom: 18px; /* Increased space */
+}
+.footer-contacts .footer-phone:hover {
+    color: var(--color-cta-yellow);
+    text-decoration: none;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.footer-social-icons a img { /* Placeholder images */
+    width: 32px; /* Slightly larger */
+    height: 32px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.footer-social-icons a:hover img {
+    opacity: 1;
+}
+
+.footer-company-details p {
+    font-size: 0.85em; /* Smaller text for details */
+    line-height: 1.6;
+    margin-bottom: 6px;
+    color: var(--color-text-secondary);
+}
+.footer-company-details h4 { /* Align with other h4 if needed */
+     margin-bottom: 18px;
+}
+
+
+.footer-bottom {
+    background-color: #e9e9e9; /* Slightly lighter than previous example for softer look */
+    padding: var(--default-spacing) 0;
+    text-align: center;
+    font-size: 0.8em; /* Smaller text */
+    margin-top: var(--default-spacing); /* Space above bottom bar */
+    border-top: 1px solid #ddd;
+}
+
+.footer-bottom .grid-container {
+    padding-top: 0; /* Grid container padding not needed if text is centered */
+    padding-bottom: 0;
+}
+.footer-bottom p {
+    margin: 0;
+    color: #6c757d; /* Bootstrap-like secondary text color */
+}
