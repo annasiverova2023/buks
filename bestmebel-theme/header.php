@@ -53,22 +53,14 @@
     <nav id="site-navigation" class="main-navigation">
         <div class="container">
             <?php
-            // We will create this template part next
-               get_template_part( 'template-parts/menus/menu-header' );
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'primary',
+                    'menu_class'     => 'primary-menu', // Or your chosen class
+                    'container'      => false,
+                )
+            );
             ?>
-            <!-- Placeholder for wp_nav_menu -->
-               <!--
-            <ul class="primary-menu-placeholder">
-                 <li><a href="#">Каталог</a></li>
-                 <li><a href="#">Оплата</a></li>
-                 <li><a href="#">Доставка</a></li>
-                 <li><a href="#">Отзывы</a></li>
-                 <li><a href="#">Контакты</a></li>
-                 <li><a href="#">Статьи</a></li>
-                 <li><a href="#">Акции</a></li>
-                 <li><a href="#">Вопросы</a></li>
-            </ul>
-               -->
         </div>
     </nav>
 </header>

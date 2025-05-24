@@ -6,23 +6,7 @@
  */
 ?>
 <section class="hero-banner">
-    <div class="pre-hero-icons">
-        <div class="container">
-            <div class="icon-block">
-                <span class="icon">🛡️</span> <?php // Placeholder icon ?>
-                <span><?php esc_html_e( 'гарантия', 'bestmebel' ); ?></span>
-            </div>
-            <div class="icon-block">
-                <span class="icon">⏳</span> <?php // Placeholder icon ?>
-                <span><?php esc_html_e( 'рассрочка', 'bestmebel' ); ?></span>
-            </div>
-            <div class="icon-block">
-                <span class="icon">🚚</span> <?php // Placeholder icon ?>
-                <span><?php esc_html_e( 'доставка', 'bestmebel' ); ?></span>
-            </div>
-        </div>
-    </div>
-
+    <?php // The pre-hero-icons div has been extracted to pre-hero-icons.php ?>
     <div class="hero-content">
         <div class="container">
             <div class="hero-text">

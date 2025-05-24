@@ -48,7 +48,7 @@
         <div class="container">
             <?php
             // We will create this template part next
-            get_template_part( 'template-parts/menus/menu-footer' );
+            get_template_part( 'template-parts/footer-menus' );
             ?>
         </div>
     </div>
